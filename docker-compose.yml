@@ -15,6 +15,8 @@ services:
       - "80"  # Expose port to other containers (Traefik can access)
     volumes:
       - ./data/sharelatex:/var/lib/overleaf
+    labels:
+      - traefik.http.middlewares.authentik-auth@file
     environment:
       # Base Configuration
       OVERLEAF_APP_NAME: ${OVERLEAF_APP_NAME:-Overleaf Community Edition}
