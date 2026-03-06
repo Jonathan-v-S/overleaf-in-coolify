@@ -1,7 +1,7 @@
 services:
   overleaf:
     restart: always
-    image: sharelatex/sharelatex:5.5.4
+    image: sharelatex/sharelatex:5.0.6
     depends_on:
       mongo:
         condition: service_healthy
